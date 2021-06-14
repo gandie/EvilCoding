@@ -55,7 +55,7 @@ f = e == A + U
 
 And find important-sounding names for both the class and its methods.
 
-Good class names end on words like `Manager` or `Agent`, good method names use words like `run`, `check` or `initialize`.
+Good class names end on words like `Manager` or `Agent`, good method names use words like `run`, `execute`, `check` or `initialize`.
 
 ## Comments
 
