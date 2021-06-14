@@ -19,9 +19,9 @@ But this makes it much too easy for others to find out what's going on.
 
 # Rules
 
-+ Do not write more than 300 lines, but make them read as hard as possible
++ Do not write more than 100 lines, but make them read as hard as possible
 + Each line which is not an empty one must be called/used in the code
-+ The result of your program must be the given one
++ The result of your program must be the given one ( `500500` ), with given input ( `1001` )
 + Contribute your version as `round_1_<user>.py` in a PR
  
 # Ideas
@@ -69,10 +69,11 @@ Try to break your reader by also commenting on the follinw line like `Now the if
 
 This case is too simple for `range`. We should build our own generator with blackjack and hookers!
 
+Do not hesitate to write a temple of computing purity arround a simple problem!
+
 ## Using `lambda`
 
 `def` is for lame people. Protect your code by using `lambda`, this will scare off beginners and looks like super-magic stuff.
-
 
 ```python
 # define some basic functions ...
@@ -80,3 +81,24 @@ P = lambda p: print(p)
 L = lambda l: len(l)
 I = lambda i: intern(i)
 ```
+
+## Make your program fragile
+
+Do not allow easy changes on your code. This can mostly be achieved by using the techniques described above. Or you just comment `DO NOT CHANGE`.
+
+## Use `*args` and `**kwargs` completely wrong
+
+Do not forget `*args` and `**kwargs` in all your function signatures, make sure to add some extra useless arguments whenn calling them.
+
+```python
+def something(a, b, *args, **kwargs):
+    '''only use a and b!'''
+    return a + b
+    
+# 30 lines down the road you call ... make sure to use important-sounding keyword arguments!
+something(a, b, True, False, [1, 3, 5], match=False)
+```
+
+## The naming game
+
+Finding misleading names is an art only the best obfuscators can master. Some words bring certain meaning with them in programming context like `key` or `token`. Using such words with a different meaning will make your readers nose bleed and create the most beautiful bugs!
