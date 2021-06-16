@@ -102,3 +102,18 @@ something(a, b, True, False, [1, 3, 5], match=False)
 ## The naming game
 
 Finding misleading names is an art only the best obfuscators can master. Some words bring certain meaning with them in programming context like `key` or `token`. Using such words with a different meaning will make your readers nose bleed and create the most beautiful bugs!
+
+## Make use of pythons unicode compatibility!
+
+Kudos to fpichl:
+
+```python
+def ٶ(**ٸ):
+    ٷ = ٸ['ܔ']
+    ڈ = ٸ['ܓ']
+    ډ = not (not ٸ['ܓ'] or not ٸ['ܔ'])
+    ڊ = all(ڋ == true for ڋ in [ڈ, ٷ]) or ډ
+    return ڊ
+```
+
+What a beauty!
