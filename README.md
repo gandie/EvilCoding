@@ -129,3 +129,7 @@ def ٶ(**ٸ):
 ```
 
 What a beauty!
+
+## Write code generating even more code
+
+Break all line limits by writing code, which generates and executes more code! Use `eval` and friends. Consider using `inspect` and `ast` to realize all your code generator dreams.
