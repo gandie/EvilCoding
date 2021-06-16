@@ -101,7 +101,19 @@ something(a, b, True, False, [1, 3, 5], match=False)
 
 ## The naming game
 
-Finding misleading names is an art only the best obfuscators can master. Some words bring certain meaning with them in programming context like `key` or `token`. Using such words with a different meaning will make your readers nose bleed and create the most beautiful bugs!
+Finding misleading names is an art only the best obfuscators can master. Some words bring certain meaning with them in programming context like `key` or `token`. Using such words with a different meaning will make your readers nose bleed and create the most beautiful bugs! Consider shadowing built-ins when you get the chance!
+
+Build your own namespace hell to trap your readers, Kudos to fpichl:
+
+```python
+true = False
+reverseԀ = list
+reverseď = reversed
+reverseԁ = range
+reverseɖ = len
+reverseɗ = str
+reverseđ = int
+```
 
 ## Make use of pythons unicode compatibility!
 
