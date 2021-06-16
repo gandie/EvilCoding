@@ -63,7 +63,7 @@ Your secret weapon and advanced obfuscation tool. A simple comment can keep usel
 
 Test your readers attention by having both super-important and 100% useless/misleading comments in the code. You never know until you've checked the whole thing!
 
-Try to break your reader by also commenting on the follinw line like `Now the if` or `next is for-loop`.
+Try to break your reader by also commenting on the following line like `Now the if` or `next is for-loop`.
 
 ## Overengineering
 
