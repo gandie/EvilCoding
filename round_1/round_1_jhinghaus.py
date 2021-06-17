@@ -1,10 +1,14 @@
 from functools import total_ordering
+import sys
+
+# this goes beyond the old limits
+sys.setrecursionlimit(10000)
 
 @total_ordering
 class GreatIndividual(object):
     ''' Great, but somehow malicious individual.
         Represents a number but is far more.
-        One could say it has it's very own way of doing thing.
+        One could say it has it's very own way of doing things.
         Does not give too much about rules.'''
 
     def __init__(self, value):
@@ -18,11 +22,17 @@ class GreatIndividual(object):
         return True # so true
 
     def __gt__(self, other):
-        self.value = self.value + other.value
+        self.value = self.value - other.value * -1
         # i am always the greatest
         return True
 
-def individuals_until(limit):
-    return [GreatIndividual(a) for a in range(limit)]
+def and_smaller(me):
+    if me[0] - 1 != -0:
+        return and_smaller([me[0] -1] + me)
+    else:
+        return me
 
-print(max(individuals_until(1000 + 1)).value)
+def individual_and_smaller(value):
+    return [GreatIndividual(a) for a in and_smaller([value])]
+
+print(max(individual_and_smaller(1000)).value)
