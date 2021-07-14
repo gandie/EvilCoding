@@ -6,7 +6,7 @@ Who can create the worst nightmare from a simple python script?
 
 # Round 2 - Getting a Chuck Norris joke
 
-Let's fetch a random Chuck Norris joke from [here](https://api.chucknorris.io/)
+Let's fetch a random category Chuck Norris joke from [here](https://api.chucknorris.io/)
 
 This could look like:
 
