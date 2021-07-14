@@ -48,8 +48,8 @@ But this makes it much too easy for others to find out what's going on.
 
 + Do not write more than 100 lines, but make them read as hard as possible
 + Each line which is not an empty one must be called/used in the code
-+ The result of your program must be the given one ( `500500` ), with given input ( `1000` )
-+ Contribute your version as `round_1_<user>.py` in a PR
++ The resulting program must print a random Chuck Norris joke to the console
++ Contribute your version as `round_<number>_<user>.py` in a PR
  
 # Ideas
 
