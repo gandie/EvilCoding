@@ -4,6 +4,33 @@ Let's pick a short and well working program and mess it up like hell!
 
 Who can create the worst nightmare from a simple python script?
 
+# Round 2 - Getting a Chuck Norris joke
+
+Let's fetch a random Chuck Norris joke from [here](https://api.chucknorris.io/)
+
+This could look like:
+
+```ipython
+In [1]: import requests
+
+In [2]: import random
+
+In [3]: categories_url = 'https://api.chucknorris.io/jokes/categories'
+
+In [4]: cat_res = requests.get(categories_url)
+
+In [5]: category = random.choice(cat_res.json())
+
+In [6]: joke_url = 'https://api.chucknorris.io/jokes/random'
+
+In [7]: joke_res = requests.get(joke_url, params={'category': category})
+
+In [8]: print(joke_res.json()['value'])
+Chuck Norris can do a wheelie on a unicycle.
+```
+
+But there must be a worse way!
+
 # Round 1 - Starting simple
 
 Task: Add all numbers from 1 to 1000.
